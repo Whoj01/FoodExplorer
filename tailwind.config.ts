@@ -8,11 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        roboto: 'var(--font-roboto)',
+        poppins: 'var(--font-poppins)',
       },
+
+      colors: {
+        black: {
+          700: '#001119',
+          800: '#0D1D25',
+          900: '#000A0F',
+          
+        }
+       }
     },
   },
   plugins: [],

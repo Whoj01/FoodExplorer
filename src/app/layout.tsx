@@ -1,8 +1,14 @@
-import './globals.css'
+import './global.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto_Flex as Roboto, Poppins } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
+const roboto = Roboto({ subsets: ['latin'], variable: '--font-roboto' })
+const poppins = Poppins({ 
+  subsets: ['latin'], 
+  variable: '--font-poppins',
+  weight: ['100', '200', '300', '400', '500'],
+}) 
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -16,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${roboto.variable} ${poppins.variable} bg-black-900`}>{children}</body>
     </html>
   )
 }
