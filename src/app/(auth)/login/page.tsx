@@ -1,8 +1,6 @@
-import { FormGroup } from "@/components/FormGroup";
 import { FormLogin } from "@/components/FormLogin";
 import { TitleText } from "@/components/TitleText";
 import Link  from 'next/link'
-
 
 export default function Login() {
   return (

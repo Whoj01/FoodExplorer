@@ -1,10 +1,20 @@
 'use client'
 
+import { FormEvent } from "react"
 import { FormGroup } from "./FormGroup"
+import { useRouter } from 'next/navigation'
 
 export function FormSingin() {
+  const router = useRouter()
+
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    router.push('/home')
+
+  }
+
   return (
-    <form className='grid gap-8'>
+    <form className='grid gap-8' onSubmit={handleSubmit}>
         <FormGroup
           labelTitle='Seu nome'
           id='name'

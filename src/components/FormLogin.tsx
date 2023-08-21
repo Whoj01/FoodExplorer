@@ -1,13 +1,32 @@
 'use client'
 
+import { FormEvent } from "react";
 import { FormGroup } from "./FormGroup";
+import { useRouter } from 'next/navigation'
 
 export function FormLogin() {
-  return (
-    <form className="grid gap-8">
-        <FormGroup id="email" placeholder="Exemplo: exemplo@exemplo.com.br" labelTitle="Email"/>
+  const router = useRouter()
 
-        <FormGroup id="password" placeholder="No mínimo 6 caracteres" labelTitle="Senha"/>
+  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    router.push('/home')
+  }
+
+  return (
+    <form className="grid gap-8" onSubmit={handleSubmit}>
+        <FormGroup 
+          id="email" 
+          placeholder="Exemplo: exemplo@exemplo.com.br" 
+          labelTitle="Email" 
+          styles="border border-slate-200"
+        />
+
+        <FormGroup 
+          id="password" 
+          placeholder="No mínimo 6 caracteres" 
+          labelTitle="Senha" 
+          styles="border border-slate-200"
+        />
 
         <button
           type="submit"
