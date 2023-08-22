@@ -7,7 +7,7 @@ export default function LayoutAuth({children}: {children: ReactNode}) {
     <main className="min-h-screen">
       <Header/>
 
-      {children }
+      { children }
     </main>
   )
 }
