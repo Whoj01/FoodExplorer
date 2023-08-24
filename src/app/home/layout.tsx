@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { ReactNode } from "react";
+import { Footer } from "@/components/Footer";
 
 
 export default function LayoutAuth({children}: {children: ReactNode}) {
@@ -8,6 +9,8 @@ export default function LayoutAuth({children}: {children: ReactNode}) {
       <Header/>
 
       { children }
+
+      <Footer/>
     </main>
-  )
+  ) 
 }

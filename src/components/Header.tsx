@@ -1,13 +1,17 @@
 import { LogOut } from "lucide-react";
-import { Logo } from "./Logo";
 import { TextInput } from "./TextInput";
 import Image from "next/image";
 import Receipt from '@/assets/svg/receipt.svg'
+import { Logo } from "./Logo";
+import { LogoIconSepia } from "./Logo/LogoIconSepia";
 
 export function Header() {
   return (
     <header className='sticky w-screen flex justify-center items-center bg-black-600 px-28 py-6 gap-8 mb-40'>
-        <Logo logoSize='h-7 w-7' fontSize='text-2xl'/>  
+        <Logo.Root>
+          <Logo.Icon logoSize="h-7 w-7"/>
+          <Logo.Text fontSize="text-2xl"/>
+        </Logo.Root>  
 
         <TextInput id='search' placeholder='Busque por pratos ou ingredientes' styles='flex-grow'/>
 
