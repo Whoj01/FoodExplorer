@@ -67,7 +67,7 @@ export function FoodContainer({ data } : FoodContainerProps) {
 
         <div className='max-w-full gap-7 flex overflow-x-auto no-scrollbar overflow-y-hidden' ref={slideRef}>
           {foods.map(food => {
-            return <FoodCard food={food} key={food.id} favoriteFood={favoriteFood}/>
+            return <FoodCard type={data.type} food={food} key={food.id} favoriteFood={favoriteFood}/>
           })}
         </div> 
        </div>  

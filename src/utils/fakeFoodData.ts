@@ -217,7 +217,7 @@ export const foodsTest : Array<Foods> = [
     {
       id: '3',
       img: Espresso,
-      title: "Espresso",
+      title: "Expresso",
       isFavorited: false,
       price: "15,97",
       description: "Café cremoso feito na temperatura e pressões perfeitas.", 
@@ -241,7 +241,7 @@ export const foodsTest : Array<Foods> = [
     {
       id: '6',
       img: Espresso,
-      title: "Espresso",
+      title: "Expresso",
       isFavorited: false,
       price: "15,97",
       description: "Café cremoso feito na temperatura e pressões perfeitas.", 

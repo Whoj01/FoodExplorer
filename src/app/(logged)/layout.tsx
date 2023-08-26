@@ -5,7 +5,7 @@ import { Footer } from "@/components/Footer";
 
 export default function LayoutAuth({children}: {children: ReactNode}) {
   return (
-    <main className="min-h-screen">
+    <main className="flex flex-col min-h-screen">
       <Header/>
 
       { children }

@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="w-screen flex justify-between items-center bg-black-600 px-28 py-6 gap-8">
+    <footer className="w-screen flex justify-between items-center bg-black-600 px-28 py-6 gap-8 mt-auto">
       <Logo.Root> 
         <Logo.IconSepia logoSize="h-7 w-7"/>
         <Logo.TextSepia fontSize="text-2xl"/>
