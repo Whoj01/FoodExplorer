@@ -25,7 +25,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 💻 Projeto
 
  Este projeto foi desenvolvido para praticar minhas habilidades como desenvolvedor web utilizando o NextJs e para aumentar meu repertório, praticando componente de composição para componentes customizáveis.
- Você
 
 ## 🔖 Layout
 Você pode ver o layout desse projeto por [esse link](https://www.figma.com/community/file/1196874589259687769). É preciso ter uma conta no [Figma](https://figma.com) para acessar.
