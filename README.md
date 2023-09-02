@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-comandos">Comandos</a>
+</p>
 
-## Getting Started
+<p align="center">
+ <img src="https://img.shields.io/static/v1?label=PRs&message=welcome&color=49AA26&labelColor=000000" alt="PRs welcome!" />
+</p>
 
-First, run the development server:
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Typescript
+- ReactJs
+- NextJs
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Bibliotecas
+- [Typescript](https://www.typescriptlang.org/)
+- [Eslint](https://eslint.org)
+- [tailwind](https://tailwindcss.com)
+- [lucide](https://lucide.dev)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 💻 Projeto
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ Este projeto foi desenvolvido para praticar minhas habilidades como desenvolvedor web utilizando o NextJs e para aumentar meu repertório, praticando componente de composição para componentes customizáveis.
 
-## Learn More
+## 🔖 Layout
+Você pode ver o layout desse projeto por [esse link](https://www.figma.com/community/file/1196874589259687769). É preciso ter uma conta no [Figma](https://figma.com) para acessar.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ⌨ Comandos
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para instalar as dependências:
 
-## Deploy on Vercel
+``` npm install  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para rodar o projeto localmente: 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+``` npm run dev  ```
+
+ ---
+
+<p>Feito com ❤️ por Josué Dias 👋🏽 Entre em contato!</p>
+
+[![Linkedin Badge](https://img.shields.io/badge/-Josuedias-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://https://www.linkedin.com/in/nycole-xavier-641271202/)](https://www.linkedin.com/in/josué-dias-271458224/)
