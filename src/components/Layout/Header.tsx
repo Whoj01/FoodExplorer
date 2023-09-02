@@ -1,14 +1,18 @@
 'use client'
 
 import { LogOut } from "lucide-react";
-import { TextInput } from "./TextInput";
+import { TextInput } from "../Forms/TextInput";
 import { Receipt } from 'lucide-react'
-import { Logo } from "./Logo";
-import { Button } from "./Button";
+import { Logo } from "../Logo";
+import { Button } from "../Button";
 import { useRouter } from "next/navigation";
-
+import { useCartStore } from "@/store/cart";
+import Link from 'next/link'
 
 export function Header() {
+  const { state: { itemsCart } } = useCartStore()
+  let amountOfItemsCart: number = itemsCart.reduce((acc, current) => acc += current.amount, 0);
+
   const router = useRouter()
 
   return (
@@ -20,10 +24,16 @@ export function Header() {
 
         <TextInput id='search' placeholder='Busque por pratos ou ingredientes' styles='flex-grow'/>
 
+        <Link href="/favoritos" className="font-roboto text-base font-normal text-zinc-300 hover:text-zinc-100 transition-all">
+          Meus favoritos
+        </Link>
+
         <Button.Root>
           <Button.Icon Icon={Receipt} IconSize={32}/>
 
-          <Button.Text content="Pedidos (0)"/>
+          <Button.Text> 
+            Pedidos ({amountOfItemsCart})
+          </Button.Text>
         </Button.Root>
 
         <LogOut size={32} className="text-zinc-100 hover:text-zinc-300 transition-colors cursor-pointer" onClick={() => router.push("/login")}/>

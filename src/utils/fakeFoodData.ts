@@ -25,7 +25,7 @@ export interface Foods {
 }
 
 
-export const foodsTest : Array<Foods> = [
+export const foodsTest : Array<any> = [
   {
    type: "Refeições",
    data: [{

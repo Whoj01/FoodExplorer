@@ -1,4 +1,4 @@
-import { FormLogin } from "@/components/FormLogin";
+import { FormLogin } from "@/components/Forms/FormLogin";
 import { TitleText } from "@/components/TitleText";
 import Link  from 'next/link'
 

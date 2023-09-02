@@ -1,7 +1,7 @@
 'use client'
 
-import { AddFood } from "@/components/AddFood"
-import { Ingredient } from "@/components/Ingredient"
+import { AddFood } from "@/components/Food/AddFood"
+import { Ingredient } from "@/components/Food/Ingredient"
 import { TitleText } from "@/components/TitleText"
 import { Food, foodsTest } from "@/utils/fakeFoodData"
 import { ChevronLeft } from "lucide-react"

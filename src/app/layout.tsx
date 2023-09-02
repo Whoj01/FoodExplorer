@@ -22,7 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={`${roboto.variable} ${poppins.variable} bg-black-900 overflow-x-hidden`}>{children}</body>
+      <body className={`${roboto.variable} ${poppins.variable} bg-black-900 overflow-x-hidden`}>
+        {children}
+      </body>
     </html>
   )
 }

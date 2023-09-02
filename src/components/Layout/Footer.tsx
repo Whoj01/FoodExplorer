@@ -1,5 +1,5 @@
 import { Copyright } from "lucide-react";
-import { Logo } from "./Logo";
+import { Logo } from "../Logo";
 
 export function Footer() {
   return (

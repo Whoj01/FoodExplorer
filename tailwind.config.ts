@@ -30,6 +30,29 @@ const config: Config = {
           100: '#00010F',
         }
        },
+
+      keyframes: {
+        fullWidth: {
+          '0%': {
+            width: '0%',
+            opacity: '0',
+            backgroundColor: 'red'
+          },
+
+          "50%": {
+            width: '50%',
+            opacity: '1'
+          },
+
+          "100%": {
+            width: '100%',
+          }
+        }
+      },
+
+      animation: {
+        fullWidth: 'fullWidth 1s ease-in-out forward'
+      }
     },
   },
   plugins: [],

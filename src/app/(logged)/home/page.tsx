@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Tortas from '@/assets/Images/tortas.png'
-import { FoodContainer } from '@/components/FoodContainer'
+import { FoodContainer } from '@/components/Food/FoodContainer'
 import { foodsTest } from '@/utils/fakeFoodData'
 
 export default function Home() {

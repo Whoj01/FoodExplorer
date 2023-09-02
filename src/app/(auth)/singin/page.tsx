@@ -1,5 +1,5 @@
 import Link  from 'next/link'
-import { FormSingin } from '@/components/FormSingin'
+import { FormSingin } from '@/components/Forms/FormSingin'
 import { TitleText } from '@/components/TitleText'
 
 export default function Singin() {

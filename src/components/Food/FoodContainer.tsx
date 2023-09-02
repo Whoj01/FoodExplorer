@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from "react";
-import { TitleText } from "./TitleText";
+import { TitleText } from "../TitleText";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import { FoodCard } from "./FoodCard";
@@ -26,7 +26,6 @@ export function FoodContainer({ data } : FoodContainerProps) {
     const newFoods = foods.map(food => {
       if(food.id === id) {
         food.isFavorited = !food.isFavorited
-        console.log('aqui')
       }
       return food
     })

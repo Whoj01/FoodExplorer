@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { CounterFood } from './CounterFood'
 import { handleAmountChange } from '@/utils/handleAmountChange'
-import { Button } from './Button'
+import { Button } from '../Button'
 
 interface AddFoodProps {
   price: number
@@ -21,10 +21,6 @@ export function AddFood({ price }: AddFoodProps) {
   }
 
   useEffect(() => {
-    console.log(totalPrice)
-  }, [totalPrice])
-
-  useEffect(() => {
     handlePrice(amount)
   }, [amount])
 
@@ -33,7 +29,9 @@ export function AddFood({ price }: AddFoodProps) {
       <CounterFood amount={amount} setAmount={handleAmount}/>
 
       <Button.Root>
-        <Button.Text content={`incluir ∙ R$${totalPrice.toString().replace(".", ",")}`}/>
+        <Button.Text>
+          {`incluir ∙ R$${totalPrice.toString().replace(".", ",")}`}
+        </Button.Text>
       </Button.Root>
     </> 
   )

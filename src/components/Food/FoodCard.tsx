@@ -2,13 +2,14 @@
 
 import { Heart } from "lucide-react"
 import { useState } from "react"
-import Spaguetti from '@/assets/Images/spaguetti-gambe.png'
 import Image from 'next/image'
 import { Food } from "@/utils/fakeFoodData"
 import Link from "next/link"
 import { CounterFood } from "./CounterFood"
-import { Button } from "./Button"
+import { Button } from "../Button"
 import { handleAmountChange } from "@/utils/handleAmountChange"
+import { useCartStore } from "@/store/cart"
+import { useFavoritesStore } from "@/store/favorites"
 
 interface FoodCardProps {
   food: Food,
@@ -17,15 +18,41 @@ interface FoodCardProps {
 }
 
 export function FoodCard({ food, favoriteFood, type } : FoodCardProps) {
+  const { actions: { addNewItemCart } } = useCartStore();
+  const { actions: { addNewFavorite } } = useFavoritesStore()
   const [amount, setAmount] = useState<number>(1)
 
   function handleAmount(quantity: number) {
    setAmount(handleAmountChange(amount, quantity))
   }
 
+  function handleFavorite() {
+    const item = {
+      id: food.id,
+      name: food.title,
+      img: food.img
+    }
+
+    favoriteFood(food.id)
+    addNewFavorite(item)
+  }
+
+  function handleAddCart() {
+    const item = {
+      id: food.id,
+      name: food.title,
+      amount,
+      totalPrice: amount * Number(food.price.replace(",", "."))
+    }
+
+    addNewItemCart(item)
+    
+    setAmount(1)
+  }
+
   return (
     <div className='w-[304px] flex flex-col justify-center items-center gap-4 flex-shrink-0 px-6 py-6 bg-black-100 relative border border-black-50 rounded-lg ease-in'>
-      <Heart size={24} className={`absolute top-2 right-4 text-zinc-100 hover:fill-zinc-100 ${food.isFavorited ? 'fill-zinc-100' : null} cursor-pointer transition-all`} onClick={() => favoriteFood(food.id)}/>
+      <Heart size={24} className={`absolute top-2 right-4 text-zinc-100 hover:fill-zinc-100 ${food.isFavorited ? 'fill-zinc-100' : null} cursor-pointer transition-all`} onClick={handleFavorite}/>
 
       <Image src={food.img} alt='Imagem de um prato de spaguetti' className='rounded-full bg-cover'/>
       
@@ -52,8 +79,10 @@ export function FoodCard({ food, favoriteFood, type } : FoodCardProps) {
       <div className='flex gap-4 justify-center items-center'>
          <CounterFood amount={amount} setAmount={handleAmount}/>
         
-        <Button.Root>
-          <Button.Text content="incluir"/>
+        <Button.Root onClick={handleAddCart}>
+          <Button.Text> 
+            Incluir  
+          </Button.Text>
         </Button.Root>
       </div>
     </div>
