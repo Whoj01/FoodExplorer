@@ -28,13 +28,19 @@ export function Header() {
           Meus favoritos
         </Link>
 
-        <Button.Root>
-          <Button.Icon Icon={Receipt} IconSize={32}/>
+        <Link href="/home" className="font-roboto text-base font-normal text-zinc-300 hover:text-zinc-100 transition-all">
+          Histórico de pedidos
+        </Link>
 
-          <Button.Text> 
-            Pedidos ({amountOfItemsCart})
-          </Button.Text>
-        </Button.Root>
+        <Link href="/pedidos">
+          <Button.Root>
+            <Button.Icon Icon={Receipt} IconSize={32}/>
+
+            <Button.Text> 
+              Pedidos ({amountOfItemsCart})
+            </Button.Text>
+          </Button.Root>
+        </Link>
 
         <LogOut size={32} className="text-zinc-100 hover:text-zinc-300 transition-colors cursor-pointer" onClick={() => router.push("/login")}/>
       </header>

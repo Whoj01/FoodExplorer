@@ -15,7 +15,7 @@ export function FavoriteCard({ favorite }: FavoriteCardProps) {
   }
 
   return (
-    <div className="flex items-center py-4 px-4 gap-5  rounded">
+    <div className="w-[320px] flex items-center py-4 px-4 gap-5 rounded">
       <Image height={72} width={72} src={favorite.img} alt={`${favorite.name} foto`}/>
 
       <div className="flex flex-col gap-2">

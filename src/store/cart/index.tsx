@@ -1,4 +1,5 @@
 import { itemAlreadyOnCart } from '@/utils/itemAlreadyOnCart'
+import { StaticImageData } from 'next/image'
 import { create } from 'zustand'
 
 export type FoodProps = {
@@ -6,10 +7,12 @@ export type FoodProps = {
   name: string
   amount: number
   totalPrice: number
+  img: StaticImageData,
 }
 
 type ActionProps = {
   addNewItemCart: (item : FoodProps) => void
+  removeItemCart: (id: string) => void
 }
 
 type storeProps = {
@@ -37,6 +40,11 @@ export const useCartStore = create<storeProps>((set) => ({
           }
           return food
         }) : [...state.state.itemsCart, item]
+      }
+    })),
+    removeItemCart: (id) => set((state) => ({
+      state: {
+        itemsCart: state.state.itemsCart.filter(item => item.id !== id)
       }
     }))
   }

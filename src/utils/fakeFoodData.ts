@@ -130,7 +130,7 @@ export const foodsTest : Array<any> = [
   type: "Sobremesas",
   data: [
     {
-      id: '1',
+      id: '14',
       img: Prugna,
       title: "Prugna Pie",
       isFavorited: false,
@@ -138,7 +138,7 @@ export const foodsTest : Array<any> = [
       description: "Torta de ameixa com massa amanteigada, polvilho em açucar.", 
     },
     {
-      id: '2',
+      id: '15',
       img: Macarons,
       title: "Macarons",
       isFavorited: false,
@@ -146,7 +146,7 @@ export const foodsTest : Array<any> = [
       description: "Farinha de amêndoas, manteiga, claras e açúcar.", 
     },
     {
-      id: '3',
+      id: '16',
       img: Peachy,
       title: "Peachy pastrie",
       isFavorited: false,
@@ -154,7 +154,7 @@ export const foodsTest : Array<any> = [
       description: "Delicioso folheado de pêssego com folhas de hortelã.", 
     },
     {
-      id: '4',
+      id: '17',
       img: Peachy,
       title: "Peachy pastrie",
       isFavorited: false,
@@ -162,7 +162,7 @@ export const foodsTest : Array<any> = [
       description: "Delicioso folheado de pêssego com folhas de hortelã.", 
     },
     {
-      id: '5',
+      id: '18',
       img: Prugna,
       title: "Prugna Pie",
       isFavorited: false,
@@ -170,7 +170,7 @@ export const foodsTest : Array<any> = [
       description: "Torta de ameixa com massa amanteigada, polvilho em açucar.", 
     },
     {
-      id: '6',
+      id: '19',
       img: Macarons,
       title: "Macarons",
       isFavorited: false,
@@ -178,7 +178,7 @@ export const foodsTest : Array<any> = [
       description: "Farinha de amêndoas, manteiga, claras e açúcar.", 
     },
     {
-      id: '7',
+      id: '20',
       img: Peachy,
       title: "Peachy pastrie",
       isFavorited: false,
@@ -186,7 +186,7 @@ export const foodsTest : Array<any> = [
       description: "Delicioso folheado de pêssego com folhas de hortelã.", 
     },
     {
-      id: '8',
+      id: '21',
       img: Prugna,
       title: "Prugna Pie",
       isFavorited: false,
@@ -199,7 +199,7 @@ export const foodsTest : Array<any> = [
   type: "Bebidas",
   data: [
     {
-      id: '1',
+      id: '22',
       img: Autunno,
       title: "Tè d'autunno",
       isFavorited: false,
@@ -207,7 +207,7 @@ export const foodsTest : Array<any> = [
       description: "Chá de anis, canela e limão. Sinta o outono italiano.", 
     },
     {
-      id: '2',
+      id: '23',
       img: Maracuja,
       title: "Suco de maracujá",
       isFavorited: false,
@@ -215,7 +215,7 @@ export const foodsTest : Array<any> = [
       description: "Suco de maracujá gelado, cremoso, docinho.", 
     },
     {
-      id: '3',
+      id: '24',
       img: Espresso,
       title: "Expresso",
       isFavorited: false,
@@ -223,7 +223,7 @@ export const foodsTest : Array<any> = [
       description: "Café cremoso feito na temperatura e pressões perfeitas.", 
     },
     {
-      id: '4',
+      id: '25',
       img: Autunno,
       title: "Tè d'autunno",
       isFavorited: false,
@@ -231,7 +231,7 @@ export const foodsTest : Array<any> = [
       description: "Chá de anis, canela e limão. Sinta o outono italiano.", 
     },
     {
-      id: '5',
+      id: '26',
       img: Maracuja,
       title: "Suco de maracujá",
       isFavorited: false,
@@ -239,7 +239,7 @@ export const foodsTest : Array<any> = [
       description: "Suco de maracujá gelado, cremoso, docinho.", 
     },
     {
-      id: '6',
+      id: '27',
       img: Espresso,
       title: "Expresso",
       isFavorited: false,
@@ -247,7 +247,7 @@ export const foodsTest : Array<any> = [
       description: "Café cremoso feito na temperatura e pressões perfeitas.", 
     },
     {
-      id: '7',
+      id: '28',
       img: Autunno,
       title: "Tè d'autunno",
       isFavorited: false,

@@ -42,6 +42,7 @@ export function FoodCard({ food, favoriteFood, type } : FoodCardProps) {
       id: food.id,
       name: food.title,
       amount,
+      img: food.img,
       totalPrice: amount * Number(food.price.replace(",", "."))
     }
 
