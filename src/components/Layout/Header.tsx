@@ -17,7 +17,7 @@ export function Header() {
 
   return (
     <header className='sticky w-screen flex justify-center items-center bg-black-600 px-28 py-6 gap-8'>
-        <Logo.Root>
+        <Logo.Root logged={true}>
           <Logo.Icon logoSize="h-7 w-7"/>
           <Logo.Text fontSize="text-2xl"/>
         </Logo.Root>  
@@ -26,10 +26,6 @@ export function Header() {
 
         <Link href="/favoritos" className="font-roboto text-base font-normal text-zinc-300 hover:text-zinc-100 transition-all">
           Meus favoritos
-        </Link>
-
-        <Link href="/home" className="font-roboto text-base font-normal text-zinc-300 hover:text-zinc-100 transition-all">
-          Histórico de pedidos
         </Link>
 
         <Link href="/pedidos">

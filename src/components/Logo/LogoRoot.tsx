@@ -1,12 +1,15 @@
 import Link from "next/link"
 
 interface LogoRootProps {
-  children: React.ReactNode
+  children: React.ReactNode,
+  logged: boolean
 }
 
-export function LogoRoot({ children }: LogoRootProps) {
+export function LogoRoot({ children, logged }: LogoRootProps) {
+  const hrefToIfIsLogged = logged ? '/home' : '/login'
+
   return (
-    <Link href="/home" className='flex items-center justify-center gap-5' >
+    <Link href={hrefToIfIsLogged} className='flex items-center justify-center gap-5' >
       {children}
     </Link>
   )
