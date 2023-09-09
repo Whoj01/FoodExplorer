@@ -1,6 +1,7 @@
 'use client'
 
 import { FavoriteProps, useFavoritesStore } from "@/store/favorites";
+import { Food, foodsTest } from "@/utils/fakeFoodData";
 import Image from "next/image";
 
 type FavoriteCardProps = {
@@ -9,6 +10,7 @@ type FavoriteCardProps = {
 
 export function FavoriteCard({ favorite }: FavoriteCardProps) {
   const { actions: { removeFavorite } } = useFavoritesStore()
+
 
   const handleRemove = () => {
     removeFavorite(favorite.id)

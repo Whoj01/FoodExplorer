@@ -5,6 +5,7 @@ export type FavoriteProps = {
   id: string,
   name: string,
   img: StaticImageData,
+  type: string
 }
 
 type ActionsProps = {

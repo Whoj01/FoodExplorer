@@ -6,7 +6,7 @@ import { PedidosContainer } from "@/components/Pedidos/LeftSide/PedidosContainer
 
 export default function Pedidos() {
   return (
-    <main className="px-28 grid grid-cols-2 gap-8 pt-8">
+    <main className="px-28 grid grid-cols-2 gap-8 pt-8 pb-12">
       <section className="flex flex-col gap-8">
         <SectionTitle>
           Meu pedido

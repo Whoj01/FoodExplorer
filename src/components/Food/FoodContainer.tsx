@@ -63,7 +63,7 @@ export function FoodContainer({ data } : FoodContainerProps) {
         <div className={`absolute w-[287px] h-[448px] -left-4 top-1/2 -translate-y-1/2  bg-gradient-to-r  from-black-50 to-back-100/20  blur-3xl z-10 ${scroll > 0 ? 'opacity-100 visible' : 'opacity-0 hidden'} transition-all`}/>
         <div className={`absolute w-[287px] h-[448px] -right-4 top-1/2 -translate-y-1/2  bg-gradient-to-l  from-black-50 to-back-100/20 blur-3xl z-10 ${!isMaxScroll ? 'opacity-100 visible' : 'opacity-0 hidden'} transition-all`}/>
 
-
+        {/*@ts-ignore*/ }
         <div className='max-w-full gap-7 flex overflow-x-auto no-scrollbar overflow-y-hidden' ref={slideRef}>
           {foods.map(food => {
             return <FoodCard type={data.type} food={food} key={food.id} favoriteFood={favoriteFood}/>

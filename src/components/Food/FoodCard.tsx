@@ -30,7 +30,8 @@ export function FoodCard({ food, favoriteFood, type } : FoodCardProps) {
     const item = {
       id: food.id,
       name: food.title,
-      img: food.img
+      img: food.img,
+      type
     }
 
     favoriteFood(food.id)

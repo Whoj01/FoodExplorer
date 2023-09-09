@@ -22,7 +22,7 @@ export function PedidosCard({ food }: PedidosCardProps) {
         </h2>
 
         <p className="font-roboto text-sm font-normal text-slate-400">
-          R${food.totalPrice}
+          R${food.totalPrice.toFixed(2)}
         </p>
       </div>
 

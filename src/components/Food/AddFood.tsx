@@ -2,12 +2,16 @@ import { useState, useEffect } from 'react'
 import { CounterFood } from './CounterFood'
 import { handleAmountChange } from '@/utils/handleAmountChange'
 import { Button } from '../Button'
+import { useCartStore } from '@/store/cart'
+import { Food, foodsTest } from '@/utils/fakeFoodData'
 
 interface AddFoodProps {
-  price: number
+  price: number,
+  food: Food,
 }
 
-export function AddFood({ price }: AddFoodProps) {
+export function AddFood({ price, food }: AddFoodProps) {
+  const {actions: { addNewItemCart } } = useCartStore()
   const [amount, setAmount] = useState<number>(1)
   const [totalPrice, setTotalPrice] = useState<string>(price.toString())
 
@@ -20,6 +24,18 @@ export function AddFood({ price }: AddFoodProps) {
     setAmount(handleAmountChange(amount, quantity))
   }
 
+  function handleAddStoreCart() {
+    const itemCart = {
+      id: food.id,
+      name: food.title,
+      amount,
+      totalPrice: +totalPrice,
+      img: food.img,
+    } 
+
+    addNewItemCart(itemCart)
+  }
+
   useEffect(() => {
     handlePrice(amount)
   }, [amount])
@@ -28,7 +44,7 @@ export function AddFood({ price }: AddFoodProps) {
     <>
       <CounterFood amount={amount} setAmount={handleAmount}/>
 
-      <Button.Root>
+      <Button.Root onClick={handleAddStoreCart}>
         <Button.Text>
           {`incluir ∙ R$${totalPrice.toString().replace(".", ",")}`}
         </Button.Text>

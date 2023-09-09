@@ -23,15 +23,13 @@ export default function Page({ params }: { params: { slug: string} }) {
   const id = searchParams.get("id")
   const type = searchParams.get("type")
 
-  let food: Food | undefined;
+  let food: Food;
 
   foodsTest.map(foods => {
     if(foods.type !== type) return null 
 
-    food = foods.data.find(food => food.id === id)
+    food = foods.data.find((food: Food) => food.id === id)
   })
-
-  console.log(food)
   
   return (
     <div className="flex flex-col justify-start gap-10 px-28 mt-6 h-100">
@@ -58,7 +56,7 @@ export default function Page({ params }: { params: { slug: string} }) {
           </div>
 
           <div className="flex gap-8">
-            <AddFood price={parseFloat(food!.price.replace(",", "."))}/>
+            <AddFood price={parseFloat(food!.price.replace(",", "."))} food={food!}/>
           </div>
         </div>     
       </div>
